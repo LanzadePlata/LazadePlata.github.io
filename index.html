@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html style="height: 100%; margin:0;">
+<head>
+	<title>Mapa de las Tierras Salvajes de Faerûn: RhinoDroid </title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="scripts/leaflet/leaflet.css">
+
+<script src="scripts/leaflet/leaflet.js"></script>
+
+
+</head>
+<body style="height: 100%; margin:0;">
+
+<div id="map" style="width: 100%; height: 100%; background: #88888;"></div>
+
+<script type="text/javascript">
+	
+// Declare Map Objext. latitud longitud zoom
+var map = L.map('map').setView([15, 0], 5);
+
+
+// Reference the tiles
+//L.tileLayer('maps/faerun/{z}/{x}/{y}.png', {
+L.tileLayer('maps/faerun/{z}_{x}_{y}.jpg', {
+	minZoom: 4,
+	maxZoom: 6,
+	continuousWorld: false,
+	noWrap: true,
+}).addTo(map);
+
+//map.on('click', function(e) { //sirve para clickar y ver coordenada ES LA COSA IMPORTANTE COORDENADA CLICK
+//	alert(e.latlng);
+//})
+
+
+// Markers and Popups
+//T1
+// //este es el 0,0
+// var marker = L.marker([0,0], {
+//	draggable: true,
+// }).addTo(map); 
+
+
+// INTRAMURALLAS
+var marker = L.marker([19.394068, 2.592773]).addTo(map); //
+marker.bindPopup('El Mejor País del Mundo, [81288], MC: Dhaybi');
+var marker = L.marker([22.917923, 6.28418]).addTo(map); //
+marker.bindPopup('B de Baguette, [77290], MC: xPoroPoro');
+var marker = L.marker([17.602139, 6.37207]).addTo(map); //
+marker.bindPopup('Villa Trevinca, [83290], MC: Dar2');
+var marker = L.marker([17.602139, 2.988281]).addTo(map); //
+marker.bindPopup('Puerto Paraná, [83288], MC: Fedor');
+var marker = L.marker([21.248422, 3.208008]).addTo(map); //
+marker.bindPopup('Mi Casa es tu Casa, [79288], MC: Berkell');
+var marker = L.marker([17.518344, 9.580078]).addTo(map); //
+marker.bindPopup('Comida Sana, [83292], MC: Ideo');
+var marker = L.marker([20.344627, 4.54834]).addTo(map); //
+marker.bindPopup('Extraños Problemas, [80289], MC: Wolfo');
+var marker = L.marker([16.741428, 7.976074]).addTo(map); //
+marker.bindPopup('¿Amaria? ¿Eres Tú?, [84291], MC: Rewtinos');
+var marker = L.marker([22.08564, 7.888184]).addTo(map); //
+marker.bindPopup('Plaga Insectoide, [78291], MC: LordChrom');
+var marker = L.marker([22.024546, 4.702148]).addTo(map); //
+marker.bindPopup('Punto Desconocido, [78289], MC: OmBuDs');
+
+
+//SHAARMID
+var marker = L.marker([22.978624, 25.97168]).addTo(map); //
+marker.bindPopup('El Pito del Sereno, [77302], MC: Daver');
+var marker = L.marker([25.542441, 27.641602]).addTo(map); //
+marker.bindPopup('Visión a Futuro, [74303], MC: Ait0rt4s');
+var marker = L.marker([23.905927, 24.279785]).addTo(map); //
+marker.bindPopup('Asunto Peliagudo, [76301], MC: Dwayene-Shan');
+
+
+ // T1
+ var marker = L.marker([11.97, 3.208008]).addTo(map); //
+marker.bindPopup('¡ES IMPRESIONANTE! La Ciencia lo Hace Realidad!, [89288], MC: Dhaybi');
+var marker = L.marker([-1.142502, -26.455078]).addTo(map); //
+marker.bindPopup('La Alianza de los Diablos, [103270], MC: Dar2');
+var marker = L.marker([-4,15]).addTo(map); //
+marker.bindPopup('El Lugar Donde la Lluvia es Negra, [105256], MC: Dhaybi');
+var marker = L.marker([11.97, 3.208008]).addTo(map); //
+marker.bindPopup('¡ES IMPRESIONANTE! La Ciencia lo Hace Realidad!, [89288], MC: Dhaybi');
+var marker = L.marker([12.039321, 10.327148]).addTo(map); //
+marker.bindPopup('Torre Oscura, [89292], MC: Desaparecido');
+var marker = L.marker([28.88316, -5.141602]).addTo(map); //
+marker.bindPopup('Unos Mercenarios con Anillos, [70283], MC: Bernihx - inactivo');
+var marker = L.marker([27.019984, 7.866211]).addTo(map); //
+marker.bindPopup('Las Ruinas Olvidadas, [72291], MC: Marc - inactivo');
+var marker = L.marker([24.487149, -13.447266]).addTo(map); //
+marker.bindPopup('Salsipuedes, [75278], MC: Augusto - inactiva');
+var marker = L.marker([7.449624, 14.633789]).addTo(map); //
+marker.bindPopup('Ali-Baba y los 40 Bandidos, [94295], MC: ReedSign - inactivo');
+var marker = L.marker([25.562265, 4.746094]).addTo(map); //
+marker.bindPopup('Duelo de Caballeros, [74289], MC: Adrián L. - inactivo');
+var marker = L.marker([6.09686, 17.753906]).addTo(map); //
+marker.bindPopup('Buscando Opciones, [94297], MC: Serjor');
+var marker = L.marker([29.61167, 9.580078]).addTo(map); //
+marker.bindPopup('Campamento Libertad, [69292], MC: DeveT');
+var marker = L.marker([23.604262, 14.545898]).addTo(map); //
+marker.bindPopup('La Lanza de Plata y el Plátano de Cristal, [76295], MC: Pato');
+var marker = L.marker([11.264612, -11.777344]).addTo(map); //
+marker.bindPopup('El Corazón Gigante, [90279], MC: Intergaláctico');
+var marker = L.marker([13.83808, 9.711914]).addTo(map); //
+marker.bindPopup('Pestilencia, [87292], MC: Intergaláctico');
+var marker = L.marker([29.649869, 12.832031]).addTo(map); //
+marker.bindPopup('Traumas de un Pasado Lejano, [69294], MC: PoroPoro');
+var marker = L.marker([26.39187, 16.259766]).addTo(map); //
+marker.bindPopup('Wonderland, [73296], MC: Nomu');
+var marker = L.marker([16.509833, 21.005859]).addTo(map); //
+marker.bindPopup('Aventuras en el Mar Astral, [84299], MC: Daver');
+var marker = L.marker([18.354526, -15.161133]).addTo(map); //
+marker.bindPopup('El Gran Abismo, [82277], MC: Ait0rt4s');
+var marker = L.marker([31.278551, 2.988281]).addTo(map); //
+marker.bindPopup('Una Abadía Curioseta, [67288], MC: Lyriel');
+var marker = L.marker([25.482951, -1.713867]).addTo(map); //
+marker.bindPopup('Boda Púrpura, [74285], MC: Fedor');
+var marker = L.marker([16.551962, 14.458008]).addTo(map); //
+marker.bindPopup('La Hacienda al Final de la Calle, [84295], MC: Ideo');
+var marker = L.marker([22.08564, 11.162109]).addTo(map); //
+marker.bindPopup('Punto Desconocido, [78293], MC: Chrom');
+
+
+
+//T2
+var marker = L.marker([-10.509417, -26.499023]).addTo(map); //
+marker.bindPopup('Claytar y la Mina de Cristal, [115270], MC: Bici');
+var marker = L.marker([-7.732765, -21.577148]).addTo(map); //
+marker.bindPopup('Mares de Arena, [112273], MC: Juanmaperti');
+var marker = L.marker([35.317366, 44.033203]).addTo(map); //
+marker.bindPopup('Un Corazón Partido, [62313], MC: Ideo');
+var marker = L.marker([-5.747174, -37.96875]).addTo(map); //
+marker.bindPopup('Strego, [108263], MC: Wolfo');
+var marker = L.marker([-7.689217, -41.066895]).addTo(map); //
+marker.bindPopup('El Tesoro del Pirata Perro Salado, [112261], MC: Berni - inactivo');
+var marker = L.marker([19.311143, -26.345215]).addTo(map); //
+marker.bindPopup('El Bosque de los Eternos, [81270], MC: Kana');
+var marker = L.marker([18.521283, 24.082031]).addTo(map); //
+marker.bindPopup('Ruinas de Lhesper, [82301], MC: Dar2');
+var marker = L.marker([43.897892, 14.458008]).addTo(map); //
+marker.bindPopup('Diversión y Miedo en Innarlport, [50295], MC: Dar2');
+var marker = L.marker([14.98724, 44.077148]).addTo(map); //
+marker.bindPopup('¿Quién es la Sant Amaría?, [86313], MC: Rewtinos');
+var marker = L.marker([22.816694, -29.750977]).addTo(map); //
+marker.bindPopup('Fuerte Theymarsh, [77272], MC: Pol');
+var marker = L.marker([30.600094, 70.136719]).addTo(map); //
+marker.bindPopup('Punto Desconocido, [68329], MC: LordChrom');
+var marker = L.marker([17.66496, -33.09082]).addTo(map); //
+marker.bindPopup('Punto Desconocido, [83266], MC: Nomu');
+var marker = L.marker([22.532854, 38.781738]).addTo(map); //
+marker.bindPopup('Nyrvastia, [77310], MC: Pato');
+var marker = L.marker([27.702984, 62.380371]).addTo(map); //
+marker.bindPopup('Mirando a los Ojos de la Muerte, [72325], MC: Wolfo');
+var marker = L.marker([-8.21149, -11.821289]).addTo(map); //
+marker.bindPopup('El Faraón Vampiro, [112279], MC: Alice');
+var marker = L.marker([32.287133, -8.459473]).addTo(map); //
+marker.bindPopup('Malos Presagios, [66281], MC: Kana');
+var marker = L.marker([26.961246, -11.931152]).addTo(map); //
+marker.bindPopup('La Esposa Desaparecida, [72279], MC: LordChrom');
+var marker = L.marker([26.411551, 58.842773]).addTo(map); //
+marker.bindPopup('Los Templos Perdidos de Khufu, [73322], MC: Dar2');
+var marker = L.marker([11.199957, 24.279785]).addTo(map); //
+marker.bindPopup('La Corrupcion del Treant, [90301], MC: Ait0rt4s');
+
+
+
+</script>
+
+</body>
+</html>
